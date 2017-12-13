@@ -1,6 +1,5 @@
 package moduleTwice.labwork15.labwork2;
 
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
