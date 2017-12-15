@@ -1,4 +1,4 @@
-package moduleTwice.lavwork212.labwork5;
+package moduleTwice.labwork212.labwork5;
 
 public class MyTestClass {
     private byte test = 34;

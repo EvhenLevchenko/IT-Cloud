@@ -1,4 +1,4 @@
-package moduleTwice.lavwork212.labwork3;
+package moduleTwice.labwork212.labwork3;
 
 import java.util.Arrays;
 import java.util.Comparator;

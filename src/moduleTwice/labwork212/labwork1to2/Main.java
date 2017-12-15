@@ -1,4 +1,4 @@
-package moduleTwice.lavwork212.labwork1to2;
+package moduleTwice.labwork212.labwork1to2;
 
 public class Main {
     public static void main(String[] args) {
