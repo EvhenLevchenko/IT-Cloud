@@ -24,18 +24,7 @@ public class  Main {
                 "     * *       \n"+
                 "      *      \n"+
                 " \n "   ;
-        System.out.println(
-                "rfkgmklem"
-        );
-        System.out.println("fdfdf" +
-                "fd" +
-                "f" +
-                "df" +
-                "df" +
-                "d" +
-                "fd" +
-                "f");
-        System.out.println("vnfjenfjki");
+
         System.out.print(a+b+c+b);
 
     }
