@@ -18,7 +18,6 @@ public class Main {
 
         mySumCount.setArray(myArray);
 
-
         Thread thread = new Thread(mySumCount);
 
         thread.start();
