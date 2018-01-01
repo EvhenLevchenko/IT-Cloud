@@ -4,14 +4,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Enter n");
+        System.out.println("Enter the number");
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        int number = sc.nextInt();
         int sum = 0;
-        for (int i = 1; i <= n; i++) {
-           /* sum += Math.pow(i,2);*/
-            sum = sum + i * i;//0+1+4+9+16
+
+        while (number != 0) {
+            sum = sum + (number % 10) * (number % 10);
+            number /= 10;
         }
-        System.out.println(sum);
+        System.out.println("The sum of squares of digits of number is: " + sum);
     }
 }
