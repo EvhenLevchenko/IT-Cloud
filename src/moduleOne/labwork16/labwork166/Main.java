@@ -11,6 +11,7 @@ public class Main {
         System.out.println(Arrays.toString(aveTemp));
         double x;
 
+
         //Arrays.sort(aveTemp);
         for (int i = 0; i < aveTemp.length; i++) {
             for (int j = aveTemp.length - 1; j > i; j--) {
