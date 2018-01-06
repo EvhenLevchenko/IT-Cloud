@@ -17,7 +17,7 @@ public class Window {
     }
 
     public Window() {
-        this(10.5, 5.5, 25, "Blue", false);
+        this(2, 5.5, 25, "Blue", false);
     }
 
     public Window(double height, double width) {

@@ -36,7 +36,6 @@ public class Main {
         Matrix.matrixMultiplication(matrixA, matrixB);
 
     }
-
 }
 
 
@@ -52,7 +51,7 @@ class Matrix {
             }
             System.out.println();
         }
-        System.out.println();
+       // System.out.println();
     }
 
     static void matrixMultiplication(int[][] matrixA, int[][] matrixB) {
@@ -66,6 +65,6 @@ class Matrix {
             }
             System.out.println();
         }
-        System.out.println();
+       // System.out.println();
     }
 }
