@@ -18,14 +18,14 @@ public class MyInitTest {
         System.out.println("static initialization block 2");
     }
 
-    public MyInitTest() {
+    public MyInitTest(int a) {
         System.out.println("First constructor ");
     }
 
-    public MyInitTest(int maxSpeed) {
-        maxSpeed = 1;
+    public MyInitTest() {
         System.out.println("Twice constructor ");
     }
+
 }
 
 class Main {
