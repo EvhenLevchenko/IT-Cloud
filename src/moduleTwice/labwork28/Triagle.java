@@ -45,6 +45,7 @@ public class Triagle extends Shape implements Dwarable {
 
     @Override
     public double calculateArea() {
+
         double s = (a + b + c) / 2;
         return sqrt(s * (s - a) * (s - b) * (s - c));
     }

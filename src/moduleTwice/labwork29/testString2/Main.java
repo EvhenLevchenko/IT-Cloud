@@ -11,7 +11,8 @@ public class Main {
         StringBuilder result=new StringBuilder();
         for(int i=0;i<string1.length();i++){
             char character=string1.charAt(i);
-            if(string2.indexOf(character)==-1&& result.indexOf(""+character)== -1){
+            if(string2.indexOf(character)==-1
+                    && result.indexOf(""+character)== -1){
                 result.append(character);
             }
         }
