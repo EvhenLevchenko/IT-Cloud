@@ -10,7 +10,7 @@ import java.util.Locale;
 public class Main {
     public static void main(String[] args) {
         Locale curLoc=Locale.getDefault();
-        System.out.println("Current Locale: "+curLoc.getDisplayName());
+        System.out.println("Current Locale : "+curLoc.getDisplayName());
 
         NumberFormat format= NumberFormat.getIntegerInstance();
         System.out.println("Integer "+format.format(200000000));
