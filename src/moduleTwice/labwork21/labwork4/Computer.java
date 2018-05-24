@@ -17,7 +17,7 @@ public class Computer {
         for (int i = 0; i < 5; i++) computer[i] = new Computer();
         for (int i = 0; i < 5; i++) {
             f = f + 0.1f;
-            computer[i].setPrice(199.99f * f);
+            computer[i].setPrice(100 * f);
         }
     }
 

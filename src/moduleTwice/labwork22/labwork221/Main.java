@@ -1,8 +1,5 @@
 package moduleTwice.labwork22.labwork221;
 
-import java.util.Arrays;
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) {
         final int ROW = 4;
@@ -18,7 +15,6 @@ public class Main {
             System.out.println();
         }
 
-
         System.out.println("Matrix second");
         int[][] matrixB = new int[ROW][COLUME];
         for (int i = 0; i < ROW; i++) {
@@ -28,7 +24,6 @@ public class Main {
             }
             System.out.println();
         }
-
 
         System.out.println("Matrix sum");
         Matrix.matrixSum(matrixA, matrixB);
@@ -40,9 +35,10 @@ public class Main {
 
 
 class Matrix {
+    static int ROW = 4;
+    static int COLUME = 4;
+
     static void matrixSum(int[][] matrixA, int[][] matrixB) {
-        final int ROW = 4;
-        final int COLUME = 4;
         int[][] matrixSum = new int[ROW][COLUME];
         for (int i = 0; i < ROW; i++) {
             for (int j = 0; j < COLUME; j++) {
@@ -51,12 +47,9 @@ class Matrix {
             }
             System.out.println();
         }
-       // System.out.println();
     }
 
     static void matrixMultiplication(int[][] matrixA, int[][] matrixB) {
-        final int ROW = 4;
-        final int COLUME = 4;
         int[][] matrixMultiplication = new int[ROW][COLUME];
         for (int i = 0; i < ROW; i++) {
             for (int j = 0; j < COLUME; j++) {
@@ -65,6 +58,5 @@ class Matrix {
             }
             System.out.println();
         }
-       // System.out.println();
     }
 }

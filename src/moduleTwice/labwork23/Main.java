@@ -10,6 +10,9 @@ public class Main {
         windows[3] = new Window(3, 33, 33, "Black");
         windows[4] = new Window(4.1, 43, 44, "Brown", false);
 
-        for (int i = 0; i < windows.length; i++) windows[i].printFields();
+
+        //for (int i = 0; i <windows.length ; i++) {windows[i].printFields();}
+
+        for (Window okno:windows) {okno.printFields(); }
     }
 }
