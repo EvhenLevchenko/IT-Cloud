@@ -7,7 +7,7 @@ public class Main {
         Employee Avenger3 = new Employee("Natasha", "ROmanova", "Black Widow", 9596);
         Employee Avenger4 = new Employee("Bruce", "Banner", "Hulk", 9500);
 
-        System.out.println("There are " + Employee.numberOfEmployee + " avengers registered.");
+        System.out.println("There are " + Employee.getNumberOfEmployee() + " avengers registered.");
     }
 }
 class Employee{
@@ -15,7 +15,7 @@ class Employee{
     private String lastName;
     private String occupation;
     private int telephone;
-    static int numberOfEmployee=0;
+  private  static int numberOfEmployee=0;
 
 
     public Employee(String firstName, String lastName, String occupation, int telephone) {
@@ -58,4 +58,11 @@ class Employee{
         this.telephone = telephone;
     }
 
+    public static int getNumberOfEmployee() {
+        return numberOfEmployee;
+    }
+
+    public static void setNumberOfEmployee(int numberOfEmployee) {
+        Employee.numberOfEmployee = numberOfEmployee;
+    }
 }

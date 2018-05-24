@@ -1,35 +1,32 @@
 package moduleTwice.labwork24;
 
-import java.util.Arrays;
-
 public class MyMath {
+
     public final static double PI = 3.14;
 
-    public static void main(String[] args) {
-        int[] array = new int[]{1, 3, 9, 2, 55, 0, 6, 7, 2};
-        System.out.println("Min: " + findMin(array));
-        System.out.println("Max: " + findMax(array));
+        static int findMin(int[] nums){
+            int m = nums[0];
+            for (int i = 1; i < nums.length; i++)
+                if (nums[i] < m) m = nums[i];
+            return m;
+        }
 
-        System.out.println("Area of the circle is: " + areaOfCircle(15));
+      static int findMax ( int[] nums){
+            int m = nums[0];
+            for (int i = 1; i < nums.length; i++)
+                if (nums[i] > m) m = nums[i];
+            return m;
+        }
 
+    public  static double avg ( int[] nums){
+            int a = 0;
+            for (int i = 0; i < nums.length; i++)
+                a += nums[i];
+            return (double) a / nums.length;
+        }
+
+        static double areaOfCircle(int radius){
+            double area = PI * radius * radius;
+            return area;
+        }
     }
-
-    public static int findMin(int[] array) {
-        int min;
-        Arrays.sort(array);
-        min = array[0];
-        return min;
-    }
-
-    public static int findMax(int[] array) {
-        int max;
-        Arrays.sort(array);
-        max = array[array.length - 1];
-        return max;
-    }
-
-    public static double areaOfCircle(int radius){
-        double area = PI * radius * radius;
-        return area;
-    }
-}

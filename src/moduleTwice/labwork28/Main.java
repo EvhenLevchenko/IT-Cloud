@@ -15,20 +15,22 @@ public class Main {
         System.out.println();
 
 
-        Rectangle[] rectangles = new Rectangle[6];
+        final int SHAPES=6;
+        Rectangle[] rectangles = new Rectangle[SHAPES];
         rectangles[0] = new Rectangle("Red", 1, 1);
         rectangles[1] = new Rectangle("Black", 44, 2);
         rectangles[2] = new Rectangle("Blue", 42, 4);
         rectangles[3] = new Rectangle("White", 14, 99);
         rectangles[4] = new Rectangle("Orange", 11, 5);
         rectangles[5] = new Rectangle("Pink", 4, 5);
-        Arrays.sort(rectangles, new ShapeColorComparator());
+        Arrays.sort(rectangles);
         for (Rectangle rectangle : rectangles) {
-            System.out.println(rectangle);
+           rectangle.draw();
         }
 
-        System.out.println();
-        Shape[] shapes = new Shape[9];
+        System.out.println("*****************************************");
+        final int SHAPESS=9;
+        Shape[] shapes = new Shape[SHAPESS];
         shapes[0] = new Rectangle("Red", 1, 1);
         shapes[1] = new Rectangle("Black", 1, 2);
         shapes[2] = new Rectangle("Blue", 2, 3);

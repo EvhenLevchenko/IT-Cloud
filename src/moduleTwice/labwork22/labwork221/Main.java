@@ -2,43 +2,20 @@ package moduleTwice.labwork22.labwork221;
 
 public class Main {
     public static void main(String[] args) {
-        final int ROW = 4;
-        final int COLUME = 4;
+        Matrix matrix = new Matrix();
 
-        System.out.println("Matrix first");
-        int[][] matrixA = new int[ROW][COLUME];
-        for (int i = 0; i < ROW; i++) {
-            for (int j = 0; j < COLUME; j++) {
-                matrixA[i][j] = (int) (Math.random() * 10);
-                System.out.print(matrixA[i][j] + "\t");
-            }
-            System.out.println();
-        }
-
-        System.out.println("Matrix second");
-        int[][] matrixB = new int[ROW][COLUME];
-        for (int i = 0; i < ROW; i++) {
-            for (int j = 0; j < COLUME; j++) {
-                matrixB[i][j] = (int) (Math.random() * 10);
-                System.out.print(matrixB[i][j] + "\t");
-            }
-            System.out.println();
-        }
-
-        System.out.println("Matrix sum");
-        Matrix.matrixSum(matrixA, matrixB);
-        System.out.println("Matrix Multiplication");
-        Matrix.matrixMultiplication(matrixA, matrixB);
-
+        matrix.matrixSum(genetatedmatrix.generateMatrixA(), genetatedmatrix.generateMatrixB());
+        matrix.matrixMultiplication(genetatedmatrix.generateMatrixA(), genetatedmatrix.generateMatrixB());
     }
 }
 
 
 class Matrix {
-    static int ROW = 4;
-    static int COLUME = 4;
+    private int ROW = 4;
+    private int COLUME = 4;
 
-    static void matrixSum(int[][] matrixA, int[][] matrixB) {
+    void matrixSum(int[][] matrixA, int[][] matrixB) {
+        System.out.println("Matrix sum");
         int[][] matrixSum = new int[ROW][COLUME];
         for (int i = 0; i < ROW; i++) {
             for (int j = 0; j < COLUME; j++) {
@@ -49,7 +26,8 @@ class Matrix {
         }
     }
 
-    static void matrixMultiplication(int[][] matrixA, int[][] matrixB) {
+    void matrixMultiplication(int[][] matrixA, int[][] matrixB) {
+        System.out.println("Matrix Multiplication");
         int[][] matrixMultiplication = new int[ROW][COLUME];
         for (int i = 0; i < ROW; i++) {
             for (int j = 0; j < COLUME; j++) {
@@ -58,5 +36,36 @@ class Matrix {
             }
             System.out.println();
         }
+    }
+}
+
+class genetatedmatrix {
+    private static final int ROW = 4;
+    private static final int COLUME = 4;
+
+    static int[][] generateMatrixA() {
+        System.out.println("Matrix first");
+        int[][] matrixA = new int[ROW][COLUME];
+        for (int i = 0; i < ROW; i++) {
+            for (int j = 0; j < COLUME; j++) {
+                matrixA[i][j] = (int) (Math.random() * 10);
+                System.out.print(matrixA[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        return matrixA;
+    }
+
+    static int[][] generateMatrixB() {
+        System.out.println("Matrix second");
+        int[][] matrixB = new int[ROW][COLUME];
+        for (int i = 0; i < ROW; i++) {
+            for (int j = 0; j < COLUME; j++) {
+                matrixB[i][j] = (int) (Math.random() * 10);
+                System.out.print(matrixB[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        return matrixB;
     }
 }

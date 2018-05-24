@@ -6,18 +6,17 @@ import static java.lang.Math.PI;
 
 public class Circle extends Shape {
 
+    private double radius;
+
     public Circle(String color, double radius) {
         super(color);
         this.radius = radius;
     }
 
-    private double radius;
-
     @Override
     public double calculateArea() {
-        return PI * (radius * 2);
+        return PI * radius * radius;
     }
-
 
     @Override
     public String toString() {
