@@ -1,7 +1,7 @@
 package moduleTwice.labwork23;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         Window[] windows = new Window[5];
 
         windows[0] = new Window();
@@ -14,5 +14,9 @@ public class Main {
         //for (int i = 0; i <windows.length ; i++) {windows[i].printFields();}
 
         for (Window okno:windows) {okno.printFields(); }
+
+        Window window1=new Window(2.2,2.2,2,"Black",true);
+        Window window2=new Window(2.2,2.2,2,"Black",true);
+
     }
 }
