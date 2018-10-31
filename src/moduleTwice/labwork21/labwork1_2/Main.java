@@ -1,6 +1,25 @@
 package moduleTwice.labwork21.labwork1_2;
 
-public class Computer {
+public class Main {
+    public static void main(String[] args) {
+        final int COMPUTERS = 5;
+
+        Computer[] computers = new Computer[COMPUTERS];
+        for (int i = 0; i < COMPUTERS; i++) {
+            computers[i] = new Computer();
+        }
+
+        for (Computer computer : computers) {
+            computer.setPrice((float) (computer.getPrice() + 0.1 * computer.getPrice()));
+        }
+
+        for (Computer computer : computers) {
+            computers.toString();
+        }
+    }
+}
+
+class Computer {
     private String manufacture;
     private int serialNumber;
     private float price;
@@ -46,5 +65,16 @@ public class Computer {
 
     public void setFrequencyCPU(int frequencyCPU) {
         this.frequencyCPU = frequencyCPU;
+    }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "manufacture='" + manufacture + '\'' +
+                ", serialNumber=" + serialNumber +
+                ", price=" + price +
+                ", quantityCPU=" + quantityCPU +
+                ", frequencyCPU=" + frequencyCPU +
+                '}';
     }
 }

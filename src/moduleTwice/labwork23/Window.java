@@ -7,7 +7,6 @@ public class Window {
     private String colour;
     private boolean isOpen;
 
-
     public Window(double height, double width, int numberOfGlass, String colour, boolean isOpen) {
         this.height = height;
         this.width = width;
@@ -17,19 +16,19 @@ public class Window {
     }
 
     public Window() {
-        this(2, 5.5, 25, "Blue", false);
     }
 
     public Window(double height, double width) {
-        this(3.3, width, 22, "Cherry", true);
+        this(height,width,5,"White",true);
+    }
+
+    public Window(double height, double width, int numberOfGlass) {
+        this(height,width,numberOfGlass,"White",true);
     }
 
     public Window(double height, double width, int numberOfGlass, String colour) {
-
-        this(height, width, numberOfGlass, "White", true);
-
+        this(height,width,numberOfGlass,colour,true);
     }
-
 
     public void setHeight(double height) {
         this.height = height;

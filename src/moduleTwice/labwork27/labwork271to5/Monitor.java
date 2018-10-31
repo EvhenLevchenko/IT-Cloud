@@ -1,5 +1,7 @@
 package moduleTwice.labwork27.labwork271to5;
 
+import java.util.Objects;
+
 public class Monitor extends Device {
     private int resolutionX;
     private int ResolutionY;
@@ -32,24 +34,18 @@ public class Monitor extends Device {
                 ", ResolutionY=" + ResolutionY + '}';
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Monitor)) return false;
         if (!super.equals(o)) return false;
-
         Monitor monitor = (Monitor) o;
-
-        if (resolutionX != monitor.resolutionX) return false;
-        return ResolutionY == monitor.ResolutionY;
+        return resolutionX == monitor.resolutionX &&
+                ResolutionY == monitor.ResolutionY;
     }
 
     @Override
     public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + resolutionX;
-        result = 31 * result + ResolutionY;
-        return result;
+        return Objects.hash(super.hashCode(), resolutionX, ResolutionY);
     }
 }

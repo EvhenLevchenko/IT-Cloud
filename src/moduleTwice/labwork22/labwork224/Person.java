@@ -1,46 +1,50 @@
 package moduleTwice.labwork22.labwork224;
 
 class Person {
-
     private String firstName;
     private String lastName;
-    private String gender;
     private int age;
+    private String gender;
     private int phoneNumber;
 
-    public void setPerson1(int phoneNumber, String firstName) {
-        this.phoneNumber = phoneNumber;
-        this.firstName = firstName;
-    }
-
-    public void setPerson2(int phoneNumber, String firstName, String gender) {
-        this.phoneNumber = phoneNumber;
-        this.firstName = firstName;
-        this.gender = gender;
-    }
-
-    public void setPerson3(String firstName, String lastName, String gender) {
-
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gender = gender;
-    }
-
-    public void setPerson4(String firstName, String lastName, String gender, int age, int phoneNumber) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gender = gender;
+    public void setPerson(String firstName, int age) {
         this.age = age;
-        this.phoneNumber = phoneNumber;
-
+        this.firstName = firstName;
     }
 
-    public void setPerson5(String lastName, String gender, int age, int phoneNumber) {
-        this.lastName = lastName;
-        this.gender = gender;
+    public void setPerson(String firstName, int age, int phoneNumber) {
         this.age = age;
+        this.firstName = firstName;
         this.phoneNumber = phoneNumber;
+    }
 
+    public void setPerson(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public void setPerson(String firstName, String lastName, String gender) {
+        this.firstName = firstName;
+        this.gender = gender;
+        this.lastName = lastName;
+    }
+
+    public void setPerson(String firstName, String lastName, int age, String gender, int phoneNumber) {
+        this.age = age;
+        this.firstName = firstName;
+        this.gender = gender;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                '}';
     }
 }
-

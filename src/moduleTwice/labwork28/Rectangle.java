@@ -1,7 +1,7 @@
 package moduleTwice.labwork28;
 
 
-public  class Rectangle extends Shape implements Comparable {
+public  class Rectangle extends Shape implements Comparable,Dwarable {
 
     private double height;
     private double width;

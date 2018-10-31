@@ -2,7 +2,7 @@ package moduleTwice.labwork28;
 
 import static java.lang.StrictMath.sqrt;
 
-public class Triagle extends Shape implements Dwarable {
+public class Triagle extends Shape implements Dwarable,Comparable {
     private double a;
     private double b;
     private double c;
@@ -45,7 +45,6 @@ public class Triagle extends Shape implements Dwarable {
 
     @Override
     public double calculateArea() {
-
         double s = (a + b + c) / 2;
         return sqrt(s * (s - a) * (s - b) * (s - c));
     }
@@ -56,5 +55,13 @@ public class Triagle extends Shape implements Dwarable {
                 "a=" + a +
                 ", b=" + b +
                 ", c=" + c;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Triagle triagle=(Triagle)o;
+        if(this.calculateArea()>triagle.calculateArea())return 1;
+        if(this.calculateArea()<triagle.calculateArea())return -1;
+        return 0;
     }
 }

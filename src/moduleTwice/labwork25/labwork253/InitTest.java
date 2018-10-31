@@ -10,7 +10,7 @@ public class InitTest {
     }
 
     {
-        id = ++nextId;
+        id = nextId++;
     }
 
     public int getId() {
@@ -24,9 +24,7 @@ class Main {
         InitTest[] initTest = new InitTest[5];
         for (int i = 0; i < initTest.length; i++) {
             initTest[i] = new InitTest();
-        }
-        for (InitTest sample : initTest) {
-            System.out.println(sample.getId());
+            System.out.println(initTest[i].getId());
         }
     }
 }

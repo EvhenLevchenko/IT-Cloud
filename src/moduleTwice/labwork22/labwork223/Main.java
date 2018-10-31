@@ -1,12 +1,22 @@
 package moduleTwice.labwork22.labwork223;
 
+import java.util.Arrays;
+
 class Employee {
-    public void calculateSalary(String name, double... salary) {
+    public void calcukateStage(String name,double... stage){
+        double sum=0;
+
+        for (double age:stage) {
+            sum+=+age;
+        }
+        System.out.println("Name: "+name+" stage: "+ sum);
+    }
+
+    public  void calculateSalary(String name, double... salary) {
         double sum = 0;
 
         for (double money : salary) {
             sum += money;
-
         }
         System.out.println("Name:" + name + " Salary:" + sum);
     }
@@ -22,8 +32,6 @@ public class Main {
     public static void main(String[] args) {
         Employee staff = new Employee();
         staff.calculateSalary("John", 55.3, 44, 9, 40.03);
-        staff.calculateSalary("Gena", 59.99, 88, 9, 66660.03);
+        staff.calcukateStage("John", 2.2,3,10.6);
     }
-
-
 }

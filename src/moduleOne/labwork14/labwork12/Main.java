@@ -17,6 +17,7 @@ public class  Main {
                 " * * * *\n"+
                 " *     *\n"+
                 " \n";
+        
 
         c=      "  *       *    \n"+
                 "   *     *     \n"+

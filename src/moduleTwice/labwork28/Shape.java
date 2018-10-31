@@ -1,6 +1,6 @@
 package moduleTwice.labwork28;
 
-public abstract class Shape implements Dwarable {
+public abstract class Shape implements Dwarable  {
     private String color;
 
     public Shape(String color) {
@@ -15,7 +15,8 @@ public abstract class Shape implements Dwarable {
         this.color = color;
     }
 
-    public abstract double calculateArea();
+
+    abstract double calculateArea();
 
     @Override
     public String toString() {

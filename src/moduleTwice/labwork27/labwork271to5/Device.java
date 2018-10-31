@@ -7,6 +7,8 @@ public class Device {
     private String serialNumber;
 
 
+
+
     public String getManufactures() {
         return manufactures;
     }
